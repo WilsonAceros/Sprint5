@@ -1,0 +1,89 @@
+body{
+    background-color: black;
+}
+
+.main-login{
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    color: antiquewhite;
+}
+
+.form2{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 50px auto 50px;
+    border: 3px solid whitesmoke;
+    border-radius: 5%;
+    width: 500px;
+    /* height: 500px; */
+    box-shadow: 5px 5px 5px cyan, -5px -5px 5px cyan, 5px -5px 5px cyan, -5px 5px 5px cyan;
+}
+
+.main_sesion h2{
+    margin-bottom: 50px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.name{
+    margin: 20px;
+    /* background-color: yellow; */
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.name>*:first-child {
+    align-self: center;
+}
+
+label{
+    /* position: relative; */
+    /* margin: 0px auto; */
+    /* text-align: center; */
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    /* padding: 5px; */
+    font-size: 20px;
+}
+
+#campoUsuarioCorreo{
+    width: 400px;
+    height: 30px;
+    align-self: center;
+}
+
+.pass{
+    display:flexbox;
+}
+
+#campoUsuarioContrasena{
+    width: 400px;
+    height: 30px;
+}
+
+#button_login{
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    display: inline-block;
+    width: 400px;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 3px solid whitesmoke;
+    /* box-shadow: 5px 5px 5px cyan, -5px -5px 5px cyan, 5px -5px 5px cyan, -5px 5px 5px cyan; */
+    text-align: center;
+    background-color:black;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#button_login:hover{
+    background-color: cyan;
+    color: black;
+}
