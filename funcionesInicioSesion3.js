@@ -3,129 +3,131 @@ var datos = {
     password: ""
 }
 
-var datosC = {
-    correo: "wilson.acerosc@gmail.com",
-    password: "123"
-}
-
-array = [{
-    nombre: "William",
-    usuario:"willdz90",
-    contrasenia:"123",
-    telefono:"3004602460",
-    direccion:"Calle 16",
-    correo:"wdiaz@upb.edu.co"
-},{
-    nombre: "William",
-    usuario:"willdz99",
-    contrasenia:"123",
-    telefono:"3004602464",
-    direccion:"Calle 16",
-    correo:"will.diaz@upb.edu.co"
-},{
-    nombre: "Salvatore",
-    usuario:"willdz99",
-    contrasenia:"123",
-    telefono:"3004602461",
-    direccion:"Calle 16",
-    correo:"salva.diaz@upb.edu.co"
-}];
+// array = [{
+//     nombre: "William",
+//     usuario:"willdz90",
+//     contrasenia:"123",
+//     telefono:"3004602460",
+//     direccion:"Calle 16",
+//     correo:"wdiaz@upb.edu.co"
+// },{
+//     nombre: "William",
+//     usuario:"willdz99",
+//     contrasenia:"1234",
+//     telefono:"3004602464",
+//     direccion:"Calle 16",
+//     correo:"will.diaz@upb.edu.co"
+// },{
+//     nombre: "Salvatore",
+//     usuario:"willdz99",
+//     contrasenia:"12345",
+//     telefono:"3004602461",
+//     direccion:"Calle 16",
+//     correo:"salva.diaz@upb.edu.co"
+// }];
 
 
-const email = document.querySelector("#campoUsuarioCorreo");
-const password = document.querySelector("#campoUsuarioContrasena");
-const formulario = document.querySelector(".formulario");
+// const email = document.querySelector("#campoUsuarioCorreo");
+// const password = document.querySelector("#campoUsuarioContrasena");
+// const formulario = document.querySelector(".formulario");
 
 // console.log(correo);
 
-email.addEventListener("input", leerTexto);
-password.addEventListener("input", leerTexto);
+// email.addEventListener("input", leerTexto);
+// password.addEventListener("input", leerTexto);
 
 // El evento de submit
-formulario.addEventListener('submit', function (evento) {
-    evento.preventDefault();
-    // validar el formulario
-    //creando las variables para hacer la validacion - se extraen del objeto datos
-    const {
-        email,
-        password
-    } = datos; // Destructuring de objeto
-    if (email === "" || password === "") {
-        //funcion mensajeError
-        mostrarAlerta("Todos los campos son obligatorios", true);
-        return; // corta la ejecucion del codigo
-    } else {
-        // enviar el formulario
-        mostrarAlerta("Datos enviados correctamente");
-        // console.log(datos);
-        //https://jsonplaceholder.typicode.com/guide/
-        // fetch('http://localhost:4040/add', {
-        //         method: 'POST',
-        //         body: JSON.stringify(datos),
-        //         headers: {
-        //             'Content-type': 'application/json; charset=UTF-8',
-        //         },
-        //     })
-        //     .then((response) => response.json())
-        //     .then((json) => console.log(json));
-    }
-});
+// formulario.addEventListener('submit', function (evento) {
+//     evento.preventDefault();
+//     // validar el formulario
+//     //creando las variables para hacer la validacion - se extraen del objeto datos
+//     const {
+//         email,
+//         password
+//     } = datos; // Destructuring de objeto
+//     if (email === "" || password === "") {
+//         //funcion mensajeError
+//         mostrarAlerta("Todos los campos son obligatorios", true);
+//         return; // corta la ejecucion del codigo
+//     } else {
+//         // enviar el formulario
+//         mostrarAlerta("Datos enviados correctamente");
+//         // console.log(datos);
+//         //https://jsonplaceholder.typicode.com/guide/
+//         // fetch('http://localhost:4040/add', {
+//         //         method: 'POST',
+//         //         body: JSON.stringify(datos),
+//         //         headers: {
+//         //             'Content-type': 'application/json; charset=UTF-8',
+//         //         },
+//         //     })
+//         //     .then((response) => response.json())
+//         //     .then((json) => console.log(json));
+//     }
+// });
 
-function leerTexto(e) {
-    datos[e.target.id] = e.target.value;
-    // console.log(datos);
-}
+// function leerTexto(e) {
+//     datos[e.target.id] = e.target.value;
+//     // console.log(datos);
+// }
 
-function mostrarAlerta(mensaje, error = null) {
-    const alerta = document.createElement("p");
-    alerta.textContent = mensaje;
+// function mostrarAlerta(mensaje, error = null) {
+//     const alerta = document.createElement("p");
+//     alerta.textContent = mensaje;
 
-    if (error) {
-        alerta.classList.add("error");
-    } else {
-        alerta.classList.add("correcto");
-    }
+//     if (error) {
+//         alerta.classList.add("error");
+//     } else {
+//         alerta.classList.add("correcto");
+//     }
 
-    formulario.appendChild(alerta);
-    // Desaparezca despues de 5 segundos
-    setTimeout(() => {
-        alerta.remove();
-    }, 5000);
-}
+//     formulario.appendChild(alerta);
+//     // Desaparezca despues de 5 segundos
+//     setTimeout(() => {
+//         alerta.remove();
+//     }, 5000);
+// }
 
-arregloDom = buscarDominio(array);
+// arregloDom = buscarDominio(array);
 
 // for(elemento in arregloDom){
 //     console.table(arregloDom[elemento]);
 // }
 
 
-arreglo = arregloDom;
-correo = "wdiaz@upb.edu.co";
-contrasena = "123";
+// arreglo = arregloDom;
+// correo = "salva.diaz@upb.edu.co";
+// contrasena = "12345";
 // console.log(contrasena);
-verificarInicioSesion3(correo, contrasena, arreglo);
+// console.log(verificarInicioSesion3(correo, contrasena, arreglo));
 
 
 function verificarInicioSesion3(correo, contrasena, arreglo){
     var counter1 = 0;
     for (objeto in arreglo){
         elemento = arreglo[counter1];
-        for(prop in elemento){
-            if((correo==prop.correo) && (contrasena==prop.contrasenia)){
-                verificarCaptcha3(true);
+        // console.log(elemento.contrasenia);
+        if((elemento.correo==correo) && (elemento.contrasenia==contrasena)){
+            var x = prompt("Cual es el factorial de 6?",x);
+            // console.log(verificarCaptcha3(x));
+            if (x==720){
+                return x;
             } else {
-                alert("Credenciales incorrectas");
                 return false;
             }
         }
         counter1++;
+        // console.log(counter1);
     }
 }
 
+
 function verificarCaptcha3(respuesta){
-    var x = prompt("Cual es el factorial 3?",x);
-    console.log(x);
+    if (respuesta==720){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -192,8 +194,8 @@ function buscarDominio(arreglo){
 //     }
 //     return ocurrencias;
 // }
-// module.exports.buscarDominio = buscarDominio;
-// module.exports.verificarInicioSesion3=verificarInicioSesion3;
-// module.exports.verificarCaptcha3=verificarCaptcha3;
+module.exports.buscarDominio = buscarDominio;
+module.exports.verificarInicioSesion3=verificarInicioSesion3;
+module.exports.verificarCaptcha3=verificarCaptcha3;
 // module.exports.retornarCuenta = retornarCuenta;
-// module.exports.registro = registro;
+module.exports.datos = datos;
