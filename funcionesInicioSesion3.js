@@ -1,7 +1,7 @@
-var datos = {
-    correo: "",
-    password: ""
-}
+// var datos = {
+//     correo: "",
+//     password: ""
+// }
 
 // array = [{
 //     nombre: "William",
@@ -108,17 +108,15 @@ function verificarInicioSesion3(correo, contrasena, arreglo){
         elemento = arreglo[counter1];
         // console.log(elemento.contrasenia);
         if((elemento.correo==correo) && (elemento.contrasenia==contrasena)){
-            var x = prompt("Cual es el factorial de 6?",x);
+            // var x = prompt("Cual es el factorial de 6?",x);
             // console.log(verificarCaptcha3(x));
-            if (x==720){
-                return x;
-            } else {
-                return false;
-            }
+            return x;
+        } else {
+            return false;
         }
-        counter1++;
-        // console.log(counter1);
     }
+    counter1++;
+        // console.log(counter1);
 }
 
 
@@ -198,4 +196,4 @@ module.exports.buscarDominio = buscarDominio;
 module.exports.verificarInicioSesion3=verificarInicioSesion3;
 module.exports.verificarCaptcha3=verificarCaptcha3;
 // module.exports.retornarCuenta = retornarCuenta;
-module.exports.datos = datos;
+// module.exports.datos = datos;
